@@ -13,7 +13,7 @@ std::string pshe (std::string str)
         while (i<str.length())
         {
 
-           while (((48<=str[i])&&(str[i]<=57))||(str[i]==46)) // ïðîâåðêà íà ÷èñëà (46- òî÷êà äëÿ äåñÿòè÷íûé)
+           while (((48<=str[i])&&(str[i]<=57))||(str[i]==46)) // Ã¯Ã°Ã®Ã¢Ã¥Ã°ÃªÃ  Ã­Ã  Ã·Ã¨Ã±Ã«Ã  (46- Ã²Ã®Ã·ÃªÃ  Ã¤Ã«Ã¿ Ã¤Ã¥Ã±Ã¿Ã²Ã¨Ã·Ã­Ã»Ã©)
            {
                string.push_back(str[i]);
 
@@ -21,7 +21,7 @@ std::string pshe (std::string str)
                 i++;
            }
 
-           if (str[i]==40) //ïðîââåðêà íà îòêðûâàþùèþ ñêîáêó
+           if (str[i]==40) //Ã¯Ã°Ã®Ã¢Ã¢Ã¥Ã°ÃªÃ  Ã­Ã  Ã®Ã²ÃªÃ°Ã»Ã¢Ã Ã¾Ã¹Ã¨Ã¾ Ã±ÃªÃ®Ã¡ÃªÃ³
            {
                stack.push(str[i]);
                i++;
@@ -101,7 +101,7 @@ double calculate_RPN (std::string RPN)
     {
         if ( ('0'<=RPN[i]) && (RPN[i]<='9') )
         {
-            while ( ( ('0'<=RPN[i]) && (RPN[i]<='9') ) || (RPN[i]=='.') ) // ïðîâåðêà íà ÷èñëà (46- òî÷êà äëÿ äåñÿòè÷íûé)
+            while ( ( ('0'<=RPN[i]) && (RPN[i]<='9') ) || (RPN[i]=='.') ) // Ã¯Ã°Ã®Ã¢Ã¥Ã°ÃªÃ  Ã­Ã  Ã·Ã¨Ã±Ã«Ã  (46- Ã²Ã®Ã·ÃªÃ  Ã¤Ã«Ã¿ Ã¤Ã¥Ã±Ã¿Ã²Ã¨Ã·Ã­Ã»Ã©)
             {
                 storage.push_back(RPN[i]);
                 i++;
@@ -156,13 +156,6 @@ int main()
     std::string str;
     std::getline(std::cin, str);
     std::cout<<pshe(str)<<'\n'<<calculate_RPN(pshe(str))<<'\n';
-    //calculate_RPN(str);
-
-
-    //std::cout<<(short)str[0];
-
-
-    //2 + 2 * 8 + 4 / 7
 
 //    for (int i =0; i<=255; i++)
 //    {
